@@ -1,0 +1,13 @@
+h1 {
+  font-size: 3em;
+  color: rgb(80, 4, 4);
+}
+
+h5 {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+
+body {
+  background-color: rgb(17, 155, 17);
+}
