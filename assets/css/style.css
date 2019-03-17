@@ -1,4 +1,5 @@
 h1 {
+  
   font-size: 3em;
   color: rgb(80, 4, 4);
 }
@@ -15,7 +16,9 @@ body {
   text-align: center;
 }
 /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
+
+
+/*#myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -43,19 +46,20 @@ body {
   color: #fff;
   cursor: pointer;
 }
+*/
 
-#myBtn:hover {
-  background: #ddd;
-  color: black;
-}
+
 .fullscreen-bg {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  margin-left: 0px;
   left: 0;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
   z-index: -100;
+  opacity: 0.75;
+  filter: alpha(opacity=50);
+
 }
 
 .fullscreen-bg__video {
@@ -64,7 +68,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+/*
+
 }
+.jumbotron {
+  
+  margin-bottom:0px;
+
+}
+.header {
+  position: fixed;
+
+}
+
+/*
 
 strong {
   font-weight: bolder;
@@ -75,3 +92,4 @@ p {
   text-align: left;
   line-height: 26pt;
 }
+
