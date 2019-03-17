@@ -90,38 +90,53 @@
             <div class="panel-body">
               <div id="events" class="list-group">
                 <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
+                  <p class="venue"></p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <h4 class="list-group-item-heading"></h4>
+                  <p class="list-group-item-text"></p>
                   <p class="venue"></p>
                 </a>
                 <a href="#" class="list-group-item">
                   <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p class="venue"></p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p class="venue"></p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p class="venue"></p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p class="venue"></p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <p class="venue"></p>
-                </a>
-                <a href="#" class="list-group-item">
-                  <h4 class="list-group-item-heading">Event title</h4>
-                  <p class="list-group-item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p class="list-group-item-text"></p>
                   <p class="venue"></p>
                 </a>
                 </div>
@@ -173,7 +188,7 @@ function getEvents(page) {
   
   $.ajax({
     type:"GET",
-    url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=5QGCEXAsJowiCI4n1uAwMlCGAcSNAEmG&size=4&page="+page,
+    url:"https://app.ticketmaster.com/discovery/v2/events.json?apikey=5QGCEXAsJowiCI4n1uAwMlCGAcSNAEmG&size=10&keyword=wild&classificationName=nhl&page="+page,
     async:true,
     dataType: "json",
     success: function(json) {
@@ -192,6 +207,7 @@ function showEvents(json) {
   var events = json._embedded.events;
   var item = items.first();
   for (var i=0;i<events.length;i++) {
+    console.log(events[i].classifications);
     item.children('.list-group-item-heading').text(events[i].name);
     item.children('.list-group-item-text').text(events[i].dates.start.localDate);
     try {
