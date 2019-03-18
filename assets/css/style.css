@@ -1,5 +1,4 @@
 h1 {
-  
   font-size: 3em;
   color: rgb(80, 4, 4);
 }
@@ -16,9 +15,7 @@ body {
   text-align: center;
 }
 /* Style the video: 100% width and height to cover the entire window */
-
-
-/*#myVideo {
+#myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -46,20 +43,44 @@ body {
   color: #fff;
   cursor: pointer;
 }
-*/
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
 
 .fullscreen-bg {
   position: fixed;
-  margin-left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
   z-index: -100;
-  opacity: 0.75;
-  filter: alpha(opacity=50);
-
 }
 
 .fullscreen-bg__video {
@@ -68,20 +89,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-/*
-
 }
 .jumbotron {
-  
-  margin-bottom:0px;
-
+  margin-bottom: 0px;
 }
 .header {
   position: fixed;
-
 }
-
-/*
 
 strong {
   font-weight: bolder;
@@ -92,4 +106,3 @@ p {
   text-align: left;
   line-height: 26pt;
 }
-
