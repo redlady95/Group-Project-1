@@ -1,7 +1,8 @@
 h1 {
   
   font-size: 3em;
-  color: rgb(80, 4, 4);
+  color: rgb(252, 252, 252);
+  font-display: bold;
 }
 
 h5 {
@@ -46,7 +47,6 @@ body {
   color: #fff;
   cursor: pointer;
 }
-*/
 
 
 .fullscreen-bg {
@@ -58,6 +58,7 @@ body {
   height: 100%;
   z-index: -100;
   opacity: 0.75;
+  background-size:cover;
   filter: alpha(opacity=50);
 
 }
@@ -68,20 +69,35 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-/*
-
 }
-.jumbotron {
-  
-  margin-bottom:0px;
 
-}
 .header {
+
   position: fixed;
 
 }
+.list {
+  display: inline-block;
+  padding: 5px
+}
+h2 {
+  color: White;
+  size: bold;
+  text-align: center;
 
-/*
+}
+.center{
+  text-align: center;
+}
+.title {
+  text-align: right;
+  float: left;
+}
+.navbar {
+  background-color: rgb(253, 250, 250);
+    border-color: #E7E7E7;
+   
+}
 
 strong {
   font-weight: bolder;
