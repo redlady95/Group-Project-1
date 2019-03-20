@@ -23,19 +23,26 @@
       crossorigin="anonymous"
     ></script>
 
+    <div
+      class="jumbotron jumbotron-fluid"
+      style="background-image: url(https://images8.alphacoders.com/415/415100.jpg); background-size: 80%;"
+    >
+      <div class="container">
+        <h1 class="display-4">Wild on Ice</h1>
+      </div>
+    </div>
+
     <title>Chat Room</title>
   </head>
   <body>
-      <div class="jumbotron jumbotron-fluid" style="background-image: url(https://images8.alphacoders.com/415/415100.jpg); background-size: 25%;">
-          <div class="container">
-            <h1 class="display-4">Wild on Ice</h1>
-         
-          </div>
     <div class="fullscreen-bg">
-        <video class="fullscreen-bg" autoplay loop muted>
-        <source src="assets/images/Minnesota Wild 2019 Goal Horn.mp4 HD" type="video/mp4">
-        </video>
-      </div>
+      <video class="fullscreen-bg" autoplay loop muted>
+        <source
+          src="assets/images/Minnesota Wild 2019 Goal Horn.mp4 HD"
+          type="video/mp4"
+        />
+      </video>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button
@@ -117,6 +124,10 @@
     </div>
 
     <script>
+      function clean(html) {
+        return $($.parseHTML(html)).text();
+      }
+
       var config = {
         apiKey: "AIzaSyDlrx5ybuXIEf6jR689nvCZi6vosVZKOvk",
         authDomain: "wild-a105e.firebaseapp.com",
@@ -135,12 +146,18 @@
       $("#add-chat").on("click", function(event) {
         event.preventDefault();
 
-        name = $("#name-input")
-          .val()
-          .trim();
-        chat = $("#chat-input")
-          .val()
-          .trim();
+        name = clean(
+          $("#name-input")
+            .val()
+            .trim()
+        );
+        chat = clean(
+          $("#chat-input")
+            .val()
+            .trim()
+        );
+
+        $("#chat-input").val("");
 
         database.ref().push({
           name: name,
@@ -160,7 +177,6 @@
           $("#chat-display").append(
             `<strong>${sv.name}</strong> ${sv.chat} <br />`
           );
-          $("chat-input").empty();
         },
         function(errorObject) {
           console.log("Errors handled: " + errorObject.code);
