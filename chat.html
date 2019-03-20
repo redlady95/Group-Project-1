@@ -23,19 +23,26 @@
       crossorigin="anonymous"
     ></script>
 
+    <div
+      class="jumbotron jumbotron-fluid"
+      style="background-image: url(https://images8.alphacoders.com/415/415100.jpg); background-size: 80%;"
+    >
+      <div class="container">
+        <h1 class="display-4">Wild on Ice</h1>
+      </div>
+    </div>
+
     <title>Chat Room</title>
   </head>
   <body>
-      <div class="jumbotron jumbotron-fluid" style="background-image: url(https://images8.alphacoders.com/415/415100.jpg); background-size: 25%;">
-          <div class="container">
-            <h1 class="display-4">Wild on Ice</h1>
-         
-          </div>
     <div class="fullscreen-bg">
-        <video class="fullscreen-bg" autoplay loop muted>
-        <source src="assets/images/Minnesota Wild 2019 Goal Horn.mp4 HD" type="video/mp4">
-        </video>
-      </div>
+      <video class="fullscreen-bg" autoplay loop muted>
+        <source
+          src="assets/images/Minnesota Wild 2019 Goal Horn.mp4 HD"
+          type="video/mp4"
+        />
+      </video>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button
@@ -116,56 +123,6 @@
       </div>
     </div>
 
-    <script>
-      var config = {
-        apiKey: "AIzaSyDlrx5ybuXIEf6jR689nvCZi6vosVZKOvk",
-        authDomain: "wild-a105e.firebaseapp.com",
-        databaseURL: "https://wild-a105e.firebaseio.com",
-        projectId: "wild-a105e",
-        storageBucket: "wild-a105e.appspot.com",
-        messagingSenderId: "787186518008"
-      };
-      firebase.initializeApp(config);
-
-      var database = firebase.database();
-
-      var name = "";
-      var chat = "";
-
-      $("#add-chat").on("click", function(event) {
-        event.preventDefault();
-
-        name = $("#name-input")
-          .val()
-          .trim();
-        chat = $("#chat-input")
-          .val()
-          .trim();
-
-        database.ref().push({
-          name: name,
-          chat: chat,
-          dateAdded: firebase.database.ServerValue.TIMESTAMP
-        });
-      });
-
-      database.ref().on(
-        "child_added",
-        function(snapshot) {
-          var sv = snapshot.val();
-
-          console.log(sv.name);
-          console.log(sv.chat);
-
-          $("#chat-display").append(
-            `<strong>${sv.name}</strong> ${sv.chat} <br />`
-          );
-          $("chat-input").empty();
-        },
-        function(errorObject) {
-          console.log("Errors handled: " + errorObject.code);
-        }
-      );
-    </script>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
