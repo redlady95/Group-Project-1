@@ -15,9 +15,9 @@ body {
 .container {
   text-align: center;
 }
-/* Style the video: 100% width and height to cover the entire window */
 
-/*#myVideo {
+
+#myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -70,6 +70,7 @@ body {
 .header {
   position: fixed;
 }
+
 .list {
   display: inline-block;
   padding: 5px;
@@ -79,7 +80,8 @@ h2 {
   size: bold;
   text-align: center;
 }
-.center {
+
+.center{ 
   text-align: center;
 }
 .title {
@@ -87,18 +89,13 @@ h2 {
   float: left;
 }
 .navbar {
+
   background-color: rgb(253, 250, 250);
   border-color: #e7e7e7;
-}
 
-strong {
-  font-weight: bolder;
-  font-size: 22px;
 }
-
-p {
-  text-align: left;
-  line-height: 26pt;
+.jumbotron {
+  margin-bottom: 0px;
 }
 
 .card-p {
@@ -117,3 +114,4 @@ p {
 .display-4 {
   text-align: center;
 }
+
