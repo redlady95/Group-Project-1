@@ -1,5 +1,4 @@
 h1 {
-  
   font-size: 3em;
   color: rgb(252, 252, 252);
   font-display: bold;
@@ -16,7 +15,36 @@ body {
 .container {
   text-align: center;
 }
-/* Style the video: 100% width and height to cover the entire window */
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
 
 .fullscreen-bg {
   position: fixed;
@@ -27,9 +55,8 @@ body {
   height: 100%;
   z-index: -100;
   opacity: 0.75;
-  background-size:cover;
+  background-size: cover;
   filter: alpha(opacity=50);
-
 }
 
 .fullscreen-bg__video {
@@ -38,24 +65,22 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-
 }
 
 .header {
-
   position: fixed;
-
 }
+
 .list {
   display: inline-block;
-  padding: 5px
+  padding: 5px;
 }
 h2 {
   color: White;
   size: bold;
   text-align: center;
-
 }
+
 .center{ 
   text-align: center;
 }
@@ -64,11 +89,29 @@ h2 {
   float: left;
 }
 .navbar {
-  background-color: rgb(251, 253, 251);
-    border-color: #E7E7E7;
-   
-   
+
+  background-color: rgb(253, 250, 250);
+  border-color: #e7e7e7;
+
 }
 .jumbotron {
   margin-bottom: 0px;
 }
+
+.card-p {
+  padding: 30px;
+  margin: 30px;
+  float: left;
+  display: block;
+}
+
+.scroll {
+  max-height: 400px;
+  max-width: 300px;
+  overflow-y: auto;
+}
+
+.display-4 {
+  text-align: center;
+}
+
