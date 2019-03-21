@@ -1,5 +1,4 @@
 h1 {
-  
   font-size: 3em;
   color: rgb(252, 252, 252);
   font-display: bold;
@@ -17,7 +16,6 @@ body {
   text-align: center;
 }
 /* Style the video: 100% width and height to cover the entire window */
-
 
 /*#myVideo {
   position: fixed;
@@ -48,7 +46,6 @@ body {
   cursor: pointer;
 }
 
-
 .fullscreen-bg {
   position: fixed;
   margin-left: 0px;
@@ -58,9 +55,8 @@ body {
   height: 100%;
   z-index: -100;
   opacity: 0.75;
-  background-size:cover;
+  background-size: cover;
   filter: alpha(opacity=50);
-
 }
 
 .fullscreen-bg__video {
@@ -72,21 +68,18 @@ body {
 }
 
 .header {
-
   position: fixed;
-
 }
 .list {
   display: inline-block;
-  padding: 5px
+  padding: 5px;
 }
 h2 {
   color: White;
   size: bold;
   text-align: center;
-
 }
-.center{
+.center {
   text-align: center;
 }
 .title {
@@ -95,8 +88,7 @@ h2 {
 }
 .navbar {
   background-color: rgb(253, 250, 250);
-    border-color: #E7E7E7;
-   
+  border-color: #e7e7e7;
 }
 
 strong {
@@ -109,3 +101,19 @@ p {
   line-height: 26pt;
 }
 
+.card-p {
+  padding: 30px;
+  margin: 30px;
+  float: left;
+  display: block;
+}
+
+.scroll {
+  max-height: 400px;
+  max-width: 300px;
+  overflow-y: auto;
+}
+
+.display-4 {
+  text-align: center;
+}
